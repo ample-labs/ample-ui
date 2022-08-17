@@ -1,6 +1,6 @@
 {
   "name": "@ample-labs/ample-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ample UI Kit",
   "repository": "https://github.com/ample-labs/ample-ui.git",
   "homepage": "https://ample-labs.github.io/ample-ui/",
@@ -14,8 +14,8 @@
     "test": "tsc"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.5",
     "@ample-labs/eslint-config-ample": "^0.1.0",
+    "@babel/core": "^7.18.5",
     "@storybook/addon-actions": "^6.5.8",
     "@storybook/addon-essentials": "^6.5.8",
     "@storybook/addon-interactions": "^6.5.8",
