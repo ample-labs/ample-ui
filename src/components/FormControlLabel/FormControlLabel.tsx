@@ -10,6 +10,7 @@ const LabelText = styled(Text)<{ disabled: boolean }>`
 export interface FormControlLabelProps extends SpaceProps {
   control: ReactElement;
   label: ReactNode;
+  fullWidth?: boolean;
 }
 
 const UnstyledFormControlLabel: FC<FormControlLabelProps> = ({
@@ -31,11 +32,14 @@ const UnstyledFormControlLabel: FC<FormControlLabelProps> = ({
   );
 };
 
-const FormControlLabel = styled(UnstyledFormControlLabel)`
+const FormControlLabel = styled(UnstyledFormControlLabel)<
+  Pick<FormControlLabelProps, 'fullWidth'>
+>`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   ${space}
+  width: ${({ fullWidth }) => (fullWidth ? `100%` : null)};
 `;
 
 export default FormControlLabel;

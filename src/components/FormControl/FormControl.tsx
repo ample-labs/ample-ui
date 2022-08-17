@@ -6,13 +6,15 @@ interface FormControlProps extends BoxProps {
   control: ReactElement;
   children?: ReactElement;
   errored?: boolean;
+  fullWidth?: boolean;
 }
 
-const FormControlContainer = styled(Box)`
+const FormControlContainer = styled(Box)<Pick<FormControlProps, 'fullWidth'>>`
   display: inline-flex;
   flex-direction: column;
   margin: 8px;
   min-width: 120px;
+  width: ${({ fullWidth }) => (fullWidth ? `100%` : null)};
 `;
 
 const UnstyledFormControl: FC<FormControlProps> = ({
