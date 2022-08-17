@@ -6,11 +6,11 @@ import {
   TypographyProps,
   variant,
 } from 'styled-system';
-import { CuiTheme } from '../../utils/createCuiTheme';
+import { AuiTheme } from '../../utils/createAuiTheme';
 import { TextColor } from './types';
 
 export interface TextProps extends SpaceProps, TypographyProps {
-  variant?: keyof CuiTheme['typography'];
+  variant?: keyof AuiTheme['typography'];
   color?: TextColor;
 }
 

@@ -1,6 +1,6 @@
 import { addParameters } from '@storybook/react';
 import { withThemesProvider } from 'themeprovider-storybook';
-import createCuiTheme from '../src/utils/createCuiTheme';
+import createAuiTheme from '../src/utils/createAuiTheme';
 import ResetCSS from '../src/utils/ResetCSS';
 
 
@@ -33,11 +33,11 @@ const globalDecorator = (StoryFn) => (
 const themes = [
   {
     name: "Light",
-    ...createCuiTheme({})
+    ...createAuiTheme({})
   },
   {
     name: "Dark",
-    ...createCuiTheme({})
+    ...createAuiTheme({})
   },
 ];
 

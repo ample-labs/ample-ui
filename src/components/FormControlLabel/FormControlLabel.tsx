@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, ReactNode, useMemo } from 'react';
 import styled from 'styled-components';
 import { space, SpaceProps } from 'styled-system';
-import { Text } from '../..';
+import Text from '../Text/Text';
 
 const LabelText = styled(Text)<{ disabled: boolean }>`
   color: ${({ theme, disabled }) => disabled && theme.palette.grey1.main};

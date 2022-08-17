@@ -49,7 +49,7 @@ interface TypographyConfig {
   caption: CSSObject;
 }
 
-export interface CuiTheme {
+export interface AuiTheme {
   space: number[];
   breakpoints: BreakpointConfig;
   palette: PaletteConfig;
@@ -57,7 +57,7 @@ export interface CuiTheme {
   fontFamily: string;
 }
 
-const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
+const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
   space: [0, 4, 8, 12, 16, 24, 32, 48, 64, 128, 256],
   breakpoints: {
     sm: 0,
@@ -170,4 +170,4 @@ const createCuiTheme = (overrides: Partial<CuiTheme>): CuiTheme => ({
   },
 });
 
-export default createCuiTheme;
+export default createAuiTheme;
