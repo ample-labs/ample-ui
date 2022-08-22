@@ -7,7 +7,7 @@ import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
 
 export default {
-  title: `Components/Icons`,
+  title: `Data Display/Icons`,
   component: SvgIcon,
   argTypes: {
     ...hideUnnecessaryControls(),

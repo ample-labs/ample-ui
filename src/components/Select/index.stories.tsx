@@ -6,7 +6,7 @@ import FormHelperText from '../FormHelperText/FormHelperText';
 import Select from './Select';
 
 export default {
-  title: `Components/Select`,
+  title: `Form/Select`,
   component: Select,
   argTypes: {
     ...hideUnnecessaryControls(),

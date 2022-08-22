@@ -8,7 +8,7 @@ import Paper from '../Paper/Paper';
 import Button from '../Button/Button';
 
 export default {
-  title: `Components/Menu`,
+  title: `Navigation/Menu`,
   component: Menu,
   argTypes: {
     ...hideUnnecessaryControls(),

@@ -5,7 +5,7 @@ import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 import SegmentButton from './SegmentButton';
 
 export default {
-  title: `Components/SegmentBar`,
+  title: `Navigation/SegmentBar`,
   component: SegmentBar,
   argTypes: {
     ...hideUnnecessaryControls(),

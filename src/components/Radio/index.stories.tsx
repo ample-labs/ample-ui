@@ -5,7 +5,7 @@ import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 import FormControlLabel from '../FormControlLabel/FormControlLabel';
 
 export default {
-  title: `Components/Radio`,
+  title: `Form/Radio`,
   component: Radio,
   argTypes: {
     ...hideUnnecessaryControls(),

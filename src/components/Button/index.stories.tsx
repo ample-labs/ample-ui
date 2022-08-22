@@ -7,7 +7,7 @@ import IconChevronLeft from '../SvgIcon/Icons/IconChevronLeft';
 import IconChevronRight from '../SvgIcon/Icons/IconChevronRight';
 
 export default {
-  title: `Components/Button`,
+  title: `Form/Button`,
   component: Button,
   argTypes: {
     ...hideUnnecessaryControls(),

@@ -5,7 +5,7 @@ import FormControlLabel from './FormControlLabel';
 import Checkbox from '../Checkbox/Checkbox';
 
 export default {
-  title: `Components/FormControlLabel`,
+  title: `Form/FormControlLabel`,
   component: FormControlLabel,
   argTypes: {
     ...hideUnnecessaryControls(),

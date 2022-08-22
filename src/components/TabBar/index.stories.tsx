@@ -5,7 +5,7 @@ import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 import TabButton from './TabButton';
 
 export default {
-  title: `Components/TabBar`,
+  title: `Navigation/TabBar`,
   component: TabBar,
   argTypes: {
     ...hideUnnecessaryControls(),
