@@ -14,6 +14,10 @@ export { default as Paper } from './components/Paper/Paper';
 export { default as Popover } from './components/Popover/Popover';
 export { default as Radio } from './components/Radio/Radio';
 export { default as Select } from './components/Select/Select';
+export { default as SegmentBar } from './components/SegmentBar/SegmentBar';
+export { default as SegmentButton } from './components/SegmentBar/SegmentButton';
+export { default as TabBar } from './components/TabBar/TabBar';
+export { default as TabButton } from './components/TabBar/TabButton';
 export { default as Text } from './components/Text/Text';
 export { default as TextField } from './components/TextField/TextField';
 

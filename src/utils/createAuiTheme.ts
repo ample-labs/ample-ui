@@ -67,9 +67,9 @@ const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
   },
   palette: {
     primary: {
-      main: `#003187`,
-      dark: `#042153`,
-      light: `#335BA0`,
+      main: `#2F5DA9`,
+      dark: `#003187`,
+      light: `#D9E7FB`,
       contrastText: `#fff`,
     },
     secondary: {
