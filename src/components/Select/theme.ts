@@ -20,7 +20,7 @@ export const cssSelect = css<SelectProps>`
       if (errored) {
         return theme.palette.danger.main;
       }
-      return theme.palette.dark1.main;
+      return theme.palette.light3.main;
     }};
   :focus {
     border: 1px solid ${({ theme }) => theme.palette.primary.main};
