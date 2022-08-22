@@ -5,7 +5,7 @@ import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 import FormControlLabel from '../FormControlLabel/FormControlLabel';
 
 export default {
-  title: `Components/Checkbox`,
+  title: `Form/Checkbox`,
   component: Checkbox,
   argTypes: {
     ...hideUnnecessaryControls(),
