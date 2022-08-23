@@ -8,6 +8,8 @@ export { default as Checkbox } from './components/Checkbox/Checkbox';
 export { default as Flex } from './components/Flex/Flex';
 export { default as FormControl } from './components/FormControl/FormControl';
 export { default as FormControlLabel } from './components/FormControlLabel/FormControlLabel';
+export { default as FormHelperText } from './components/FormHelperText/FormHelperText';
+export { default as FormLabel } from './components/FormLabel/FormLabel';
 export { default as Menu } from './components/Menu/Menu';
 export { default as Modal } from './components/Modal/Modal';
 export { default as Paper } from './components/Paper/Paper';
