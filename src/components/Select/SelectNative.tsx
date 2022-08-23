@@ -1,6 +1,6 @@
 import React, { forwardRef, SelectHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import IconChevronDown from '../SvgIcon/Icons/IconChevronDown';
+import IconDownFilled from '../SvgIcon/Icons/IconDownFilled';
 import { cssSelect } from './theme';
 import { selectColors, SelectProps } from './types';
 
@@ -13,7 +13,7 @@ const SelectElement = styled.select`
   ${cssSelect}
 `;
 
-const SelectIcon = styled(IconChevronDown)`
+const SelectIcon = styled(IconDownFilled)`
   position: absolute;
   top: calc(50% - 0.5em);
   right: 12px;

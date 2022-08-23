@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import IconButton from './IconButton';
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
-import { IconChevronDown } from '../SvgIcon';
+import { IconDownFilled } from '../SvgIcon';
 
 export default {
   title: `Data Display/IconButton`,
@@ -17,7 +17,7 @@ export default {
 
 export const Default: ComponentStory<typeof IconButton> = ({ ...props }) => (
   <IconButton {...props}>
-    <IconChevronDown />
+    <IconDownFilled />
   </IconButton>
 );
 Default.args = {

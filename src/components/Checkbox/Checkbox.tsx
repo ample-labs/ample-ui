@@ -1,6 +1,6 @@
 import React, { forwardRef, InputHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { IconCheck } from '../..';
+import { IconCheckboxCheck } from '../..';
 import { CheckboxColor, checkboxColors } from './types';
 
 const CheckboxInput = styled.input`
@@ -69,7 +69,7 @@ const Checkbox = styled(
       <CheckboxContainer className={className} color={color}>
         <CheckboxInput type="checkbox" ref={ref} {...props} />
         <CheckIconWrapper color={color}>
-          <IconCheck />
+          <IconCheckboxCheck />
         </CheckIconWrapper>
       </CheckboxContainer>
     );

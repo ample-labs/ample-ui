@@ -3,8 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
 import { buttonColors, buttonVariants, buttonSizes } from './types';
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
-import IconChevronLeft from '../SvgIcon/Icons/IconChevronLeft';
-import IconChevronRight from '../SvgIcon/Icons/IconChevronRight';
+import IconBackFilled from '../SvgIcon/Icons/IconBackFilled';
+import IconNextFilled from '../SvgIcon/Icons/IconNextFilled';
 
 export default {
   title: `Form/Button`,
@@ -36,7 +36,7 @@ IconLeft.args = {
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
-  iconLeft: <IconChevronLeft />,
+  iconLeft: <IconBackFilled />,
 };
 
 export const IconRight = Template.bind({});
@@ -45,5 +45,5 @@ IconRight.args = {
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
-  iconRight: <IconChevronRight />,
+  iconRight: <IconNextFilled />,
 };
