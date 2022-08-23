@@ -1,4 +1,4 @@
-# Contributing to the Ample ecosystem 🥞
+# Contributing to the Ample ecosystem
 
 Thanks for taking the time to contribute !
 
