@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import ButtonBase, { ButtonBaseProps } from './ButtonBase';
 import { iconSizeVariants } from './theme';
-import { buttonColors, ButtonSize, buttonSizes, buttonVariants } from './types';
+import { ButtonSize } from './types';
 
 export interface ButtonProps extends ButtonBaseProps {
   fullWidth?: boolean;
@@ -45,12 +45,6 @@ const Button: FC<
       {wrappedIconRight}
     </ButtonElement>
   );
-};
-
-Button.defaultProps = {
-  color: buttonColors.PRIMARY,
-  variant: buttonVariants.FILLED,
-  size: buttonSizes.MD,
 };
 
 export default Button;

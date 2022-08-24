@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import createTransition from '../../utils/createTransition';
 import { variants, sizeVariants } from './theme';
-import { ButtonColor, ButtonSize, ButtonVariant } from './types';
+import {
+  ButtonColor,
+  buttonColors,
+  ButtonSize,
+  buttonSizes,
+  ButtonVariant,
+  buttonVariants,
+} from './types';
 
 export interface ButtonBaseProps {
   variant?: ButtonVariant;
@@ -35,5 +42,11 @@ const ButtonBase = styled.button<ButtonBaseProps>`
     cursor: default;
   }
 `;
+
+ButtonBase.defaultProps = {
+  color: buttonColors.PRIMARY,
+  variant: buttonVariants.FILLED,
+  size: buttonSizes.MD,
+};
 
 export default ButtonBase;
