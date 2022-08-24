@@ -5,6 +5,7 @@ import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
 import IconCheckboxCheck from './Icons/IconCheckboxCheck';
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
+import Card from '../Card/Card';
 
 export default {
   title: `Data Display/Icons`,
@@ -23,7 +24,10 @@ export const Default: ComponentStory<typeof SvgIcon> = (props) => (
 const modules = import.meta.glob(`./Icons/*.tsx`, { eager: true });
 const components: { [key: string]: any } = Object.keys(modules).reduce(
   (accum, path) => {
-    const file = path.substring(2).replace(`.tsx`, ``).replace(`Icons/`, ``);
+    const file = path
+      .substring(2)
+      .replace(`.tsx`, ``)
+      .replace(`Icons/Icon`, ``);
     return {
       ...accum,
       [file]: modules[path],
@@ -37,18 +41,20 @@ export const IconList: FC = () => (
     {Object.keys(components).map((file) => {
       const Icon = components[file].default;
       return (
-        <Flex
-          key={file}
-          flexDirection="column"
-          justifyContent="space-between"
-          alignItems="center"
-          p="8px"
-        >
-          <Icon fontSize="30px" />
-          <Text variant="caption" fontSize="14px">
-            {file}
-          </Text>
-        </Flex>
+        <Card m={1}>
+          <Flex
+            key={file}
+            flexDirection="column"
+            justifyContent="space-between"
+            alignItems="center"
+            p="8px"
+          >
+            <Icon fontSize="30px" />
+            <Text variant="caption" fontSize="14px">
+              {file}
+            </Text>
+          </Flex>
+        </Card>
       );
     })}
   </Flex>
