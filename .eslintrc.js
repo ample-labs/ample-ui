@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    '@ample-labs/eslint-config-ample',
-    'plugin:storybook/recommended',
-  ],
+  extends: ['@ample-labs/eslint-config-ample', 'plugin:storybook/recommended'],
   env: {
     browser: true,
     es6: true,
