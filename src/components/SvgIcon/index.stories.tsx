@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import SvgIcon from './SvgIcon';
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
-import IconCheck from './Icons/IconCheck';
+import IconCheckboxCheck from './Icons/IconCheckboxCheck';
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
 
@@ -15,7 +15,7 @@ export default {
 } as ComponentMeta<typeof SvgIcon>;
 
 export const Default: ComponentStory<typeof SvgIcon> = (props) => (
-  <IconCheck {...props} />
+  <IconCheckboxCheck {...props} />
 );
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

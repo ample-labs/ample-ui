@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import SvgIcon, { SvgIconProps } from '../SvgIcon';
 
-const IconCheck: FC<SvgIconProps> = (props) => (
+const IconCheckboxCheck: FC<SvgIconProps> = (props) => (
   <SvgIcon
     viewBox="0 0 18 18"
     fill="none"
@@ -15,4 +15,4 @@ const IconCheck: FC<SvgIconProps> = (props) => (
   </SvgIcon>
 );
 
-export default IconCheck;
+export default IconCheckboxCheck;

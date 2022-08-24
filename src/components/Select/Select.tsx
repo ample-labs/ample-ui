@@ -10,7 +10,7 @@ import React, {
   useState,
 } from 'react';
 import styled from 'styled-components';
-import IconChevronDown from '../SvgIcon/Icons/IconChevronDown';
+import IconDownFilled from '../SvgIcon/Icons/IconDownFilled';
 import Input from '../Input/Input';
 import Menu from '../Menu/Menu';
 import MenuItem from '../Menu/MenuItem';
@@ -32,7 +32,7 @@ const InputElement = styled(Input)`
   box-sizing: border-box;
 `;
 
-const SelectIcon = styled(IconChevronDown)`
+const SelectIcon = styled(IconDownFilled)`
   position: absolute;
   top: calc(50% - 0.5em);
   right: 12px;
