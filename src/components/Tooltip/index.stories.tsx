@@ -2,7 +2,6 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
-import FormControlLabel from '../FormControlLabel/FormControlLabel';
 import Tooltip from './Tooltip';
 import Button from '../Button/Button';
 
@@ -14,18 +13,15 @@ export default {
   },
 } as ComponentMeta<typeof Tooltip>;
 
-export const Default: ComponentStory<typeof FormControlLabel> = ({
-  disabled,
-  ...props
-}) => {
+export const Default: ComponentStory<typeof Tooltip> = ({ ...props }) => {
   return (
     <>
-      <Tooltip title="Hello world" {...props}>
+      <Tooltip {...props}>
         <Button type="button">Open tooltip</Button>
       </Tooltip>
     </>
   );
 };
 Default.args = {
-  disabled: false,
+  title: `Hello world`,
 };
