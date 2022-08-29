@@ -1,8 +1,7 @@
 import { addParameters } from '@storybook/react';
 import { withThemesProvider } from 'themeprovider-storybook';
-import createAuiTheme from '../src/utils/createAuiTheme';
+import { createAuiTheme } from '../src/utils/createAuiTheme';
 import ResetCSS from '../src/utils/ResetCSS';
-
 
 export const parameters = {
   viewMode: 'docs',
