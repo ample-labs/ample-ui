@@ -28,7 +28,7 @@ export { default as TextField } from './components/TextField/TextField';
 export { default as Tooltip } from './components/Tooltip/Tooltip';
 
 // Utils
-export { default as createAuiTheme } from './utils/createAuiTheme';
+export { default as createAuiTheme, AuiTheme } from './utils/createAuiTheme';
 export { default as createTransition } from './utils/createTransition';
 export { default as debounce } from './utils/debounce';
 export { default as hexToRgb } from './utils/hexToRgb';
