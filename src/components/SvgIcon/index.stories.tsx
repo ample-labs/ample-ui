@@ -41,9 +41,8 @@ export const IconList: FC = () => (
     {Object.keys(components).map((file) => {
       const Icon = components[file].default;
       return (
-        <Card m={1}>
+        <Card m={1} key={file}>
           <Flex
-            key={file}
             flexDirection="column"
             justifyContent="space-between"
             alignItems="center"
