@@ -9,8 +9,11 @@ export default {
   component: TabBar,
   argTypes: {
     ...hideUnnecessaryControls(),
-    disabled: {
+    fullWidth: {
       type: `boolean`,
+    },
+    selectedIndex: {
+      control: false,
     },
   },
 } as ComponentMeta<typeof TabBar>;
@@ -27,4 +30,7 @@ export const Default: ComponentStory<typeof TabBar> = (args) => {
   );
 };
 
-Default.args = {};
+export const FullWidth = Default.bind({});
+FullWidth.args = {
+  fullWidth: true,
+};

@@ -12,13 +12,12 @@ import React, {
 import styled, { CSSObject } from 'styled-components';
 import { TabBarColor, tabBarColors } from './types';
 
-const TabBarContainer = styled.div``;
-
-const TabScroller = styled.div<{ fixed?: boolean }>`
+const TabScroller = styled.div<Pick<TabBarProps, 'fullWidth'>>`
   position: relative;
   display: inline-block;
   flex: 1 1 auto;
   white-space: nowrap;
+  width: ${({ fullWidth }) => fullWidth && `100%`};
 `;
 
 const FlexContainer = styled.div`
@@ -48,6 +47,7 @@ export interface TabBarProps {
   color?: TabBarColor;
   selectedIndex: number;
   onChange?: (e: MouseEvent<HTMLDivElement>, index: number) => void;
+  fullWidth?: boolean;
 }
 
 const TabBar: FC<PropsWithChildren<TabBarProps>> = ({
@@ -112,15 +112,13 @@ const TabBar: FC<PropsWithChildren<TabBarProps>> = ({
   );
 
   return (
-    <TabBarContainer {...props}>
-      <TabScroller>
-        <FlexContainer ref={listRef} onClick={handleListClick}>
-          {newChildren}
-        </FlexContainer>
-        <Underline />
-        <Indicator color={color} style={indicatorStyle} />
-      </TabScroller>
-    </TabBarContainer>
+    <TabScroller {...props}>
+      <FlexContainer ref={listRef} onClick={handleListClick}>
+        {newChildren}
+      </FlexContainer>
+      <Underline />
+      <Indicator color={color} style={indicatorStyle} />
+    </TabScroller>
   );
 };
 
