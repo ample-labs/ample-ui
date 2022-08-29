@@ -56,7 +56,6 @@ export interface AuiTheme {
   breakpoints: BreakpointConfig;
   palette: PaletteConfig;
   typography: TypographyConfig;
-  fontFamily: string;
 }
 
 const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
@@ -138,7 +137,6 @@ const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
     },
     ...overrides.palette,
   },
-  fontFamily: `inherit`,
   typography: {
     h1: {
       fontSize: `60px`,
