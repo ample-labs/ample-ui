@@ -4,43 +4,43 @@ import { ButtonProps } from './Button';
 import { buttonVariants, buttonSizes } from './types';
 
 export const sizeVariants = {
-  [buttonSizes.SM]: {
-    fontSize: `14px`,
-    fontWeight: 600,
-    lineHeight: `24px`,
-    padding: `7px 40px`,
-  },
   [buttonSizes.MD]: {
     fontSize: `16px`,
     fontWeight: 600,
     lineHeight: `26px`,
     padding: `11px 40px`,
   },
+  [buttonSizes.SM]: {
+    fontSize: `14px`,
+    fontWeight: 600,
+    lineHeight: `24px`,
+    padding: `8px 24px`,
+  },
 };
 
 export const iconSizeVariants = {
   [buttonSizes.SM]: {
-    fontSize: `14px`,
+    fontSize: `20px`,
   },
   [buttonSizes.MD]: {
-    fontSize: `16px`,
+    fontSize: `24px`,
   },
 };
 
 export const variants = {
   [buttonVariants.FILLED]: css<ButtonProps>`
     background-color: ${({ theme, color }) =>
-      color && theme.palette[color].main};
+      color && theme.palette[color].dark};
     color: ${({ theme, color }) => color && theme.palette[color].contrastText};
     :hover {
       background-color: ${({ theme, color }) =>
-        color && theme.palette[color].light};
+        color && theme.palette[color].main};
     }
   `,
   [buttonVariants.OUTLINED]: css<ButtonProps>`
     border: 1px solid
-      ${({ theme, color }) => color && theme.palette[color].main};
-    color: ${({ theme, color }) => color && theme.palette[color].main};
+      ${({ theme, color }) => color && theme.palette[color].dark};
+    color: ${({ theme, color }) => color && theme.palette[color].dark};
     :hover {
       background-color: rgba(
         ${({ theme, color }) => color && hexToRgb(theme.palette[color].main)},
@@ -52,6 +52,6 @@ export const variants = {
     }
   `,
   [buttonVariants.TEXT]: css<ButtonProps>`
-    color: ${({ theme, color }) => color && theme.palette[color].main};
+    color: ${({ theme, color }) => color && theme.palette[color].dark};
   `,
 };

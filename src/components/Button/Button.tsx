@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import ButtonBase, { ButtonBaseProps } from './ButtonBase';
 import { iconSizeVariants } from './theme';
-import { ButtonSize } from './types';
+import { ButtonSize, buttonSizes } from './types';
 
 export interface ButtonProps extends ButtonBaseProps {
   fullWidth?: boolean;
@@ -16,14 +16,12 @@ const ButtonElement = styled(ButtonBase)<ButtonProps>`
 
 const IconLeftWrapper = styled.span<{ size?: ButtonSize }>`
   display: inherit;
-  margin-left: -8px;
-  margin-right: 8px;
+  margin-left: ${({ size }) => (size === buttonSizes.SM ? `-12px` : `-8px`)};
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 const IconRightWrapper = styled.span<{ size?: ButtonSize }>`
   display: inherit;
-  margin-left: 8px;
-  margin-right: -8px;
+  margin-right: ${({ size }) => (size === buttonSizes.SM ? `-12px` : `-8px`)};
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 

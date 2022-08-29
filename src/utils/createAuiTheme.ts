@@ -7,9 +7,11 @@ interface BreakpointConfig {
 }
 
 interface PaletteColor {
+  lighter?: string;
   light?: string;
   main: string;
   dark?: string;
+  darker?: string;
   contrastText: string;
 }
 interface PaletteBackgroundColor {
@@ -67,9 +69,11 @@ const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
   },
   palette: {
     primary: {
+      lighter: `#F0F8FF`,
+      light: `#D9E7FB`,
       main: `#2F5DA9`,
       dark: `#003187`,
-      light: `#D9E7FB`,
+      darker: `#042153`,
       contrastText: `#fff`,
     },
     secondary: {
