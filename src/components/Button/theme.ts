@@ -14,7 +14,7 @@ export const sizeVariants = {
     fontSize: `14px`,
     fontWeight: 600,
     lineHeight: `24px`,
-    padding: `8px 24px`,
+    padding: `8px 12px`,
   },
 };
 

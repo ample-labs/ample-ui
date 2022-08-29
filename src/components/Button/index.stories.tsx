@@ -3,8 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
 import { buttonColors, buttonVariants, buttonSizes } from './types';
 import { hideUnnecessaryControls } from '../../helpers/storybookHelper';
-import IconBackFilled from '../SvgIcon/Icons/IconBackFilled';
-import IconNextFilled from '../SvgIcon/Icons/IconNextFilled';
+import { IconNextOutlined, IconWalletOutlined } from '../SvgIcon';
 
 export default {
   title: `Form/Button`,
@@ -32,18 +31,18 @@ Default.args = {
 
 export const IconLeft = Template.bind({});
 IconLeft.args = {
-  children: `Button`,
+  children: `Connect Wallet`,
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
-  iconLeft: <IconBackFilled />,
+  iconLeft: <IconWalletOutlined />,
 };
 
 export const IconRight = Template.bind({});
 IconRight.args = {
-  children: `Button`,
+  children: `Next`,
   variant: buttonVariants.FILLED,
   color: buttonColors.PRIMARY,
   size: buttonSizes.MD,
-  iconRight: <IconNextFilled />,
+  iconRight: <IconNextOutlined />,
 };

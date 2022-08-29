@@ -16,12 +16,15 @@ const ButtonElement = styled(ButtonBase)<ButtonProps>`
 
 const IconLeftWrapper = styled.span<{ size?: ButtonSize }>`
   display: inherit;
-  margin-left: ${({ size }) => (size === buttonSizes.SM ? `-12px` : `-8px`)};
+  margin-right: 4px;
+  margin-left: ${({ size }) => (size === buttonSizes.SM ? undefined : `-12px`)};
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 const IconRightWrapper = styled.span<{ size?: ButtonSize }>`
   display: inherit;
-  margin-right: ${({ size }) => (size === buttonSizes.SM ? `-12px` : `-8px`)};
+  margin-left: 4px;
+  margin-right: ${({ size }) =>
+    size === buttonSizes.SM ? undefined : `-12px`};
   ${({ size }) => size && iconSizeVariants[size]}
 `;
 
