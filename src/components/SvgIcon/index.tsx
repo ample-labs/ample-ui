@@ -61,5 +61,7 @@ export { default as IconWalletFilled } from './Icons/IconWalletFilled';
 export { default as IconWalletOutlined } from './Icons/IconWalletOutlined';
 export { default as IconWarningFilled } from './Icons/IconWarningFilled';
 export { default as IconWarningOutlined } from './Icons/IconWarningOutlined';
+export { default as IconShareFilled } from './Icons/IconShareFilled';
+export { default as IconShareOutlined } from './Icons/IconShareOutlined';
 
 export { default as SvgIcon } from './SvgIcon';
