@@ -1,18 +1,19 @@
 import styled from 'styled-components';
-import Button, { ButtonProps } from '../Button/Button';
+import ButtonBase, { ButtonBaseProps } from '../Button/ButtonBase';
+import { iconSizeVariants } from '../Button/theme';
 import { IconButtonShape, iconButtonShapes } from './types';
 
-export interface IconButtonProps
-  extends Omit<ButtonProps, 'iconLeft' | 'iconRight' | 'fullWidth'> {
+export interface IconButtonProps extends ButtonBaseProps {
   shape?: IconButtonShape;
 }
 
-const IconButton = styled(Button)<IconButtonProps>`
+const IconButton = styled(ButtonBase)<IconButtonProps>`
   padding: 12px;
   border-width: 2px;
 
   border-radius: ${({ shape }) =>
     shape === iconButtonShapes.ROUND ? `50%` : `8px`};
+  ${({ size }) => size && iconSizeVariants[size]}
 `;
 
 IconButton.defaultProps = {
