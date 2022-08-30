@@ -32,6 +32,7 @@ const ModalRoot = styled.div<{ open?: boolean }>`
 const Modal: FC<PropsWithChildren<ModalProps>> = ({
   onClose,
   children,
+  open,
   ...props
 }) => {
   const handleBackdropClick = useCallback<MouseEventHandler<HTMLElement>>(
@@ -47,8 +48,12 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
     [onClose],
   );
 
+  if (!open) {
+    return null;
+  }
+
   return createPortal(
-    <ModalRoot {...props}>
+    <ModalRoot open={open} {...props}>
       <Backdrop onClick={handleBackdropClick} />
       {children}
     </ModalRoot>,
