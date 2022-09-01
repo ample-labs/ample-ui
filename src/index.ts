@@ -12,6 +12,8 @@ export { default as FormHelperText } from './components/FormHelperText/FormHelpe
 export { default as FormLabel } from './components/FormLabel/FormLabel';
 export { default as IconButton } from './components/IconButton/IconButton';
 export { default as Menu } from './components/Menu/Menu';
+export { default as MenuList } from './components/Menu/MenuList';
+export { default as MenuItem } from './components/Menu/MenuItem';
 export { default as Modal } from './components/Modal/Modal';
 export { default as NumberField } from './components/NumberField/NumberField';
 export { default as Paper } from './components/Paper/Paper';
