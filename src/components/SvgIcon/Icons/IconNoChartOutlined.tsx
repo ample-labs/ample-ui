@@ -9,34 +9,24 @@ const IconNoChartOutlined: FC<SvgIconProps> = (props) => (
     {...props}
   >
     <path
-      d="M4.60999 4.59998V18.61C4.60999 19.05 4.93998 19.4 5.34998 19.4H19.39"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M19.78 19.9729H5.73999C4.77999 19.9729 4 19.1729 4 18.1829V4.17291H6V17.9729H19.77V19.9729H19.78Z"
+      fill="currentColor"
     />
     <path
-      d="M10.15 11.46H6.78998V17.36H10.15V11.46Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M12.22 17.1729H6.85999V9.27295H12.22V17.1729ZM8.85999 15.1729H10.22V11.2729H8.85999V15.1729Z"
+      fill="currentColor"
     />
     <path
-      d="M13.52 9.23993H10.16V17.3599H13.52V9.23993Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M15.58 17.1729H10.22V7.05292H15.58V17.1729ZM12.22 15.1729H13.58V9.05292H12.22V15.1729Z"
+      fill="currentColor"
     />
     <path
-      d="M16.88 7.06995H13.52V17.3599H16.88V7.06995Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M18.94 17.1729H13.58V4.88293H18.94V17.1729ZM15.58 15.1729H16.94V6.88293H15.58V15.1729Z"
+      fill="currentColor"
     />
     <path
-      d="M19.06 4.90997L4.89996 19.01"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M18.9565 4.00001L4.79431 18.1079L5.85293 19.1706L20.0151 5.0627L18.9565 4.00001Z"
+      fill="currentColor"
     />
   </SvgIcon>
 );

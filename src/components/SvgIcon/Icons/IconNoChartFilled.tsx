@@ -9,28 +9,17 @@ const IconNoChartFilled: FC<SvgIconProps> = (props) => (
     {...props}
   >
     <path
-      d="M9.63998 17.6799V15.2899L7.23999 17.6799H9.63998Z"
+      d="M10.93 10.1209H8.08002V15.9709H10.93V10.1209Z"
+      fill="currentColor"
+    />
+    <path d="M14.91 7.92096H12.06V15.971H14.91V7.92096Z" fill="currentColor" />
+    <path d="M18.88 5.77094H16.03V15.9709H18.88V5.77094Z" fill="currentColor" />
+    <path
+      d="M19.78 19.9109H5.74001C4.78001 19.9109 4 19.1109 4 18.1209V4.1109H6V17.9109H19.77V19.9109H19.78Z"
       fill="currentColor"
     />
     <path
-      d="M9.64001 11.02H6.39001V16.41L9.64001 13.17V11.02Z"
-      fill="currentColor"
-    />
-    <path
-      d="M10.51 17.6799H13.76V11.1799L10.51 14.4199V17.6799Z"
-      fill="currentColor"
-    />
-    <path
-      d="M13.76 8.50995H10.51V12.3L13.76 9.05995V8.50995Z"
-      fill="currentColor"
-    />
-    <path d="M14.64 6.06995V8.18996L16.77 6.06995H14.64Z" fill="currentColor" />
-    <path
-      d="M14.64 10.31V17.6799H17.89V7.06995L14.64 10.31Z"
-      fill="currentColor"
-    />
-    <path
-      d="M19.15 19.91H5.56999C4.75999 19.91 4.10999 19.23 4.10999 18.39V4.83997H5.60999V18.39L19.15 18.41V19.91Z"
+      d="M19.0667 4.00001L4.97406 18.0927L6.38827 19.5069L20.4809 5.41422L19.0667 4.00001Z"
       fill="currentColor"
     />
   </SvgIcon>
