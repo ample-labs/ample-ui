@@ -8,23 +8,11 @@ const IconErrorOutlined: FC<SvgIconProps> = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
+    <path d="M13 8.34H11V13.16H13V8.34Z" fill="currentColor" />
+    <path d="M13 14.1H11V15.65H13V14.1Z" fill="currentColor" />
     <path
-      d="M12.04 8.53V13.35"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M12.04 14.29V15.45"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M15.65 3.73999H8.42C7.71 3.73999 7.04001 4.11999 6.69001 4.73999L3.08001 11C2.72001 11.62 2.72001 12.38 3.08001 13L6.69001 19.26C7.05001 19.88 7.71 20.26 8.42 20.26H15.65C16.36 20.26 17.03 19.88 17.38 19.26L20.84 13.26C21.29 12.48 21.29 11.52 20.84 10.74L17.38 4.73999C17.02 4.11999 16.36 3.73999 15.65 3.73999V3.73999Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M12 21.65C6.66999 21.65 2.34 17.32 2.34 11.99C2.34 6.66002 6.66999 2.33002 12 2.33002C17.33 2.33002 21.66 6.66002 21.66 11.99C21.66 17.32 17.33 21.65 12 21.65ZM12 4.34001C7.77999 4.34001 4.34 7.77002 4.34 12C4.34 16.23 7.77999 19.66 12 19.66C16.22 19.66 19.66 16.23 19.66 12C19.66 7.77002 16.23 4.34001 12 4.34001Z"
+      fill="currentColor"
     />
   </SvgIcon>
 );

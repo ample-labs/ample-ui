@@ -9,52 +9,24 @@ const IconCalculatorOutlined: FC<SvgIconProps> = (props) => (
     {...props}
   >
     <path
-      d="M7.41998 8.93001H10.93"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
+      d="M11.03 7.93001H7.32001V9.43001H11.03V7.93001Z"
+      fill="currentColor"
+    />
+    <path d="M16.84 15.09H13.13V16.59H16.84V15.09Z" fill="currentColor" />
+    <path d="M16.84 12.99H13.13V14.49H16.84V12.99Z" fill="currentColor" />
+    <path d="M15.74 6.60001H14.24V10.76H15.74V6.60001Z" fill="currentColor" />
+    <path d="M17.06 7.93001H12.92V9.43001H17.06V7.93001Z" fill="currentColor" />
+    <path
+      d="M10.1104 12.7894L7.16885 15.731L8.22951 16.7916L11.1711 13.8501L10.1104 12.7894Z"
+      fill="currentColor"
     />
     <path
-      d="M12.92 15.7H16.43"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
+      d="M8.23659 12.8065L7.17593 13.8672L10.1034 16.7946L11.164 15.7339L8.23659 12.8065Z"
+      fill="currentColor"
     />
     <path
-      d="M12.92 13.71H16.43"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M14.67 7.16V10.7"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M16.43 8.93001H12.91"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M10.42 13.45L7.92999 15.96"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M10.42 15.96L7.92999 13.45"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M19.36 15.92V5.23C19.36 4.86 19.06 4.56 18.69 4.56H5.32C4.95 4.56 4.64999 4.86 4.64999 5.23V18.75C4.64999 19.12 4.95 19.42 5.32 19.42H15.83L19.36 15.91V15.92Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M18.45 20.45H5.56C4.46 20.45 3.56 19.55 3.56 18.45V5.56C3.56 4.46 4.46 3.56 5.56 3.56H18.45C19.55 3.56 20.45 4.46 20.45 5.56V18.45C20.45 19.55 19.55 20.45 18.45 20.45ZM5.56 5.56V18.45H18.45V5.56H5.56Z"
+      fill="currentColor"
     />
   </SvgIcon>
 );

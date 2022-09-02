@@ -9,34 +9,18 @@ const IconStopWatchOutlined: FC<SvgIconProps> = (props) => (
     {...props}
   >
     <path
-      d="M15.74 5.61H8.26002C7.90001 5.61 7.57001 5.8 7.39001 6.11L3.65001 12.59C3.47001 12.9 3.47001 13.28 3.65001 13.59L7.39001 20.07C7.57001 20.38 7.90001 20.57 8.26002 20.57H15.74C16.1 20.57 16.43 20.38 16.61 20.07L20.35 13.59C20.53 13.28 20.53 12.9 20.35 12.59L16.61 6.11C16.43 5.8 16.1 5.61 15.74 5.61V5.61Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M11.95 22.24C7.07001 22.24 3.10001 18.27 3.10001 13.39C3.10001 8.51 7.07001 4.54 11.95 4.54C16.83 4.54 20.8 8.51 20.8 13.39C20.8 18.27 16.83 22.24 11.95 22.24ZM11.95 6.54C8.17001 6.54 5.10001 9.61 5.10001 13.39C5.10001 17.17 8.17001 20.24 11.95 20.24C15.73 20.24 18.8 17.17 18.8 13.39C18.8 9.61 15.73 6.54 11.95 6.54Z"
+      fill="currentColor"
     />
+    <path d="M16.42 1.76H7.20001V3.76H16.42V1.76Z" fill="currentColor" />
     <path
-      d="M7.60001 3.41H16.4"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M13.45 16.55L10.96 14.06V9.88H12.96V13.23L14.86 15.14L13.45 16.55Z"
+      fill="currentColor"
     />
+    <path d="M12.81 2.76H10.81V5.06H12.81V2.76Z" fill="currentColor" />
     <path
-      d="M12.14 9.38V12.97L14.24 15.07"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M12 3.41V5.6"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M18.138 6.49218L17.1592 7.05684L18.5983 9.5515L19.5771 8.98684L18.138 6.49218Z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeMiterlimit="10"
+      d="M18.0637 4.64074L15.6431 6.7184L18.9061 10.5201L21.3268 8.44241L18.0637 4.64074Z"
+      fill="currentColor"
     />
   </SvgIcon>
 );
