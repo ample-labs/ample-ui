@@ -8,7 +8,8 @@ import React, {
 import styled from 'styled-components';
 import debounce from '../../utils/debounce';
 import ownerWindow from '../../utils/ownerWindow';
-import Modal, { ModalProps } from '../Modal/Modal';
+import Modal from '../Modal/Modal';
+import { ModalProps } from '../Modal/types';
 import Paper from '../Paper/Paper';
 
 export interface PopoverProps extends ModalProps {

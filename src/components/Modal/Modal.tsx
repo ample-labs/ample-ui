@@ -1,18 +1,12 @@
 import React, {
   FC,
-  MouseEvent,
   MouseEventHandler,
   PropsWithChildren,
   useCallback,
 } from 'react';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
-
-export interface ModalProps {
-  open?: boolean;
-  onClose?: (e: MouseEvent, reason: 'escapeKeyDown' | 'backdropClick') => void;
-  backdropInvisible?: boolean;
-}
+import { ModalProps } from './types';
 
 const Backdrop = styled.div<{ invisible?: boolean }>`
   position: fixed;

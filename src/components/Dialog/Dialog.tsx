@@ -7,6 +7,8 @@ import React, {
 import styled from 'styled-components';
 import Modal from '../Modal/Modal';
 import Paper from '../Paper/Paper';
+import DialogFooter from './DialogFooter';
+import DialogHeader from './DialogHeader';
 import { DialogProps } from './types';
 
 const DialogRoot = styled(Modal)``;
@@ -40,6 +42,10 @@ const Dialog: FC<PropsWithChildren<DialogProps>> = ({
   minWidth,
   open,
   onClose,
+  title,
+  subtitle,
+  hideCloseButton,
+  footer,
   children,
   ...props
 }) => {
@@ -56,11 +62,30 @@ const Dialog: FC<PropsWithChildren<DialogProps>> = ({
     [onClose],
   );
 
+  const handleCloseButtonClick = useCallback<MouseEventHandler<HTMLElement>>(
+    (event) => {
+      if (event.target !== event.currentTarget) {
+        return;
+      }
+
+      if (onClose) {
+        onClose(event, `closeButtonClick`);
+      }
+    },
+    [onClose],
+  );
+
   return (
     <DialogRoot open={open} onClose={onClose} {...props}>
       <DialogContainer onClick={handleContainerClick}>
         <DialogPaper minWidth={minWidth} maxWidth={maxWidth}>
+          <DialogHeader
+            title={title}
+            subtitle={subtitle}
+            onClose={hideCloseButton ? undefined : handleCloseButtonClick}
+          />
           {children}
+          <DialogFooter>{footer}</DialogFooter>
         </DialogPaper>
       </DialogContainer>
     </DialogRoot>
