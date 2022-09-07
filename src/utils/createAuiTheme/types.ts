@@ -46,9 +46,10 @@ interface TypographyConfig {
   h5: CSSObject;
   h6: CSSObject;
   subtitle: CSSObject;
-  p1: CSSObject;
-  p2: CSSObject;
+  body1: CSSObject;
+  body2: CSSObject;
   caption: CSSObject;
+  tooltip: CSSObject;
 }
 
 interface ZIndexConfig {

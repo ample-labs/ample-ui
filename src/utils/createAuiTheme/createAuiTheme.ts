@@ -82,33 +82,65 @@ const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
   typography: {
     h1: {
       fontSize: `60px`,
+      fontWeight: 400,
+      lineHeight: `72px`,
+      letterSpacing: `-0.015em`,
     },
     h2: {
       fontSize: `48px`,
+      fontWeight: 400,
+      lineHeight: `57px`,
+      letterSpacing: `-0.01em`,
     },
     h3: {
       fontSize: `34px`,
+      fontWeight: 400,
+      lineHeight: `41px`,
+      letterSpacing: `-0.005em`,
     },
     h4: {
       fontSize: `24px`,
+      fontWeight: 600,
+      lineHeight: `29px`,
+      letterSpacing: `-0.005em`,
     },
     h5: {
       fontSize: `20px`,
+      fontWeight: 600,
+      lineHeight: `24px`,
     },
     h6: {
       fontSize: `18px`,
+      fontWeight: 600,
+      lineHeight: `21px`,
     },
     subtitle: {
       fontSize: `16px`,
+      fontWeight: 600,
+      lineHeight: `24px`,
     },
-    p1: {
+    body1: {
       fontSize: `16px`,
+      fontWeight: 400,
+      lineHeight: `24px`,
     },
-    p2: {
+    body2: {
       fontSize: `14px`,
+      fontWeight: 400,
+      lineHeight: `20px`,
+      letterSpacing: `0.015em`,
     },
     caption: {
+      fontSize: `14px`,
+      fontWeight: 600,
+      lineHeight: `20px`,
+      letterSpacing: `0.015em`,
+    },
+    tooltip: {
       fontSize: `12px`,
+      fontWeight: 600,
+      lineHeight: `16px`,
+      letterSpacing: `0.015em`,
     },
     ...overrides.typography,
   },
