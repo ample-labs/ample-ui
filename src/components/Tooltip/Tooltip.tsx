@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import { Placement } from '@popperjs/core';
 import Popper from '../Popper/Popper';
 import hexToRgb from '../../utils/hexToRgb';
+import Text from '../Text/Text';
 
 export interface TooltipProps {
   title: string;
@@ -23,7 +24,7 @@ const TooltipContent = styled.div`
   border-radius: 4px;
   background-color: rgba(
     ${({ theme }) => hexToRgb(theme.palette.primary.dark || `#003187`)},
-    0.8
+    0.85
   );
   color: ${({ theme }) => theme.palette.primary.contrastText};
   overflow-wrap: break-word;
@@ -161,7 +162,7 @@ const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
         placement={placement}
       >
         <TooltipContent>
-          {title}
+          <Text variant="tooltip">{title}</Text>
           <TooltipArrow ref={setArrowEl} />
         </TooltipContent>
       </StyledPopper>

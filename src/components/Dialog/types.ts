@@ -5,8 +5,8 @@ export type DialogCloseReason = ModalCloseReason | 'closeButtonClick';
 export interface DialogProps extends ModalProps<DialogCloseReason> {
   maxWidth?: string;
   minWidth?: string;
-  title?: ReactNode;
-  subtitle?: ReactNode;
+  title?: string;
+  subtitle?: string;
   hideCloseButton?: boolean;
   footer?: ReactNode;
 }

@@ -1,18 +1,14 @@
-import React, {
-  FC,
-  MouseEventHandler,
-  PropsWithChildren,
-  ReactNode,
-} from 'react';
+import React, { FC, MouseEventHandler, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import IconButton from '../IconButton/IconButton';
 import { IconCloseOutlined } from '../SvgIcon';
 import Text from '../Text/Text';
+import { DialogProps } from './types';
 
 export interface DialogHeaderProps {
   onClose?: MouseEventHandler<HTMLElement>;
-  title?: ReactNode;
-  subtitle?: ReactNode;
+  title?: DialogProps['title'];
+  subtitle?: DialogProps['subtitle'];
 }
 
 const DialogTitle = styled(Text).attrs({ as: `h2`, variant: `h5` })``;
