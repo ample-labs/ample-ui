@@ -12,5 +12,6 @@ module.exports = {
       { devDependencies: ['**/*.stories.tsx'] },
     ],
     'guard-for-in': 'off',
+    'react/default-props-match-prop-types': 'off',
   },
 };

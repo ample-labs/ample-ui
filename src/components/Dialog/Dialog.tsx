@@ -5,13 +5,9 @@ import React, {
   useCallback,
 } from 'react';
 import styled from 'styled-components';
-import Modal, { ModalProps } from '../Modal/Modal';
+import Modal from '../Modal/Modal';
 import Paper from '../Paper/Paper';
-
-export interface DialogProps extends ModalProps {
-  maxWidth?: string;
-  minWidth?: string;
-}
+import { DialogProps } from './types';
 
 const DialogRoot = styled(Modal)``;
 
