@@ -64,10 +64,6 @@ const Dialog: FC<PropsWithChildren<DialogProps>> = ({
 
   const handleCloseButtonClick = useCallback<MouseEventHandler<HTMLElement>>(
     (event) => {
-      if (event.target !== event.currentTarget) {
-        return;
-      }
-
       if (onClose) {
         onClose(event, `closeButtonClick`);
       }
