@@ -5,7 +5,7 @@ import MenuList from './MenuList';
 export type MenuProps = PopoverProps;
 
 const Menu: FC<PropsWithChildren<MenuProps>> = ({ children, ...props }) => (
-  <Popover {...props}>
+  <Popover backdropInvisible {...props}>
     <MenuList>{children}</MenuList>
   </Popover>
 );

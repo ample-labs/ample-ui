@@ -11,9 +11,10 @@ import styled from 'styled-components';
 export interface ModalProps {
   open?: boolean;
   onClose?: (e: MouseEvent, reason: 'escapeKeyDown' | 'backdropClick') => void;
+  backdropInvisible?: boolean;
 }
 
-const Backdrop = styled.div`
+const Backdrop = styled.div<{ invisible?: boolean }>`
   position: fixed;
   display: flex;
   align-items: center;
@@ -22,10 +23,18 @@ const Backdrop = styled.div`
   bottom: 0;
   top: 0;
   left: 0;
-  background-color: transparent;
+  background-color: ${({ invisible }) =>
+    invisible ? `transparent` : `rgba(0, 0, 0, 0.5)`};
+  z-index: -1;
 `;
 
 const ModalRoot = styled.div<{ open?: boolean }>`
+  position: fixed;
+  z-index: ${({ theme }) => theme.zIndex.modal};
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
   visibility: ${({ open }) => !open && `hidden`};
 `;
 
@@ -33,6 +42,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
   onClose,
   children,
   open,
+  backdropInvisible,
   ...props
 }) => {
   const handleBackdropClick = useCallback<MouseEventHandler<HTMLElement>>(
@@ -54,7 +64,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
 
   return createPortal(
     <ModalRoot open={open} {...props}>
-      <Backdrop onClick={handleBackdropClick} />
+      <Backdrop onClick={handleBackdropClick} invisible={backdropInvisible} />
       {children}
     </ModalRoot>,
     document.body,

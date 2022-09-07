@@ -8,7 +8,7 @@ export interface IconButtonProps extends ButtonBaseProps {
 }
 
 const IconButton = styled(ButtonBase)<IconButtonProps>`
-  padding: 12px;
+  padding: 0; // Icon padding as button padding
   border-width: 2px;
 
   border-radius: ${({ shape }) =>

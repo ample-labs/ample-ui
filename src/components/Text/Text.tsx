@@ -15,6 +15,7 @@ export interface TextProps extends SpaceProps, TypographyProps {
 }
 
 const Text = styled(`span`)<TextProps>`
+  margin: 0; // reset
   ${variant({
     key: `typography`,
   })}

@@ -112,6 +112,10 @@ const createAuiTheme = (overrides: Partial<AuiTheme>): AuiTheme => ({
     },
     ...overrides.typography,
   },
+  zIndex: {
+    modal: 1000,
+    tooltip: 1100,
+  },
 });
 
 export default createAuiTheme;

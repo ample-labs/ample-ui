@@ -51,9 +51,15 @@ interface TypographyConfig {
   caption: CSSObject;
 }
 
+interface ZIndexConfig {
+  modal: number;
+  tooltip: number;
+}
+
 export interface AuiTheme {
   space: number[];
   breakpoints: BreakpointConfig;
   palette: PaletteConfig;
   typography: TypographyConfig;
+  zIndex: ZIndexConfig;
 }
