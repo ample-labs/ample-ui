@@ -7,7 +7,7 @@ export interface NumberFieldProps extends InputProps {
 
 const NumberField = styled(Input)<NumberFieldProps>`
   text-align: right;
-  ${({ theme }) => theme.typography.h6}
+  ${({ theme }) => theme.typography.h5}
 
   ::placeholder {
     color: ${({ theme }) => theme.palette.dark1.main};
