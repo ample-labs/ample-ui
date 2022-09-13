@@ -6,29 +6,20 @@ export interface NumberFieldProps extends InputProps {
 }
 
 const NumberField = styled(Input)<NumberFieldProps>`
-  padding: 16px;
-  font-size: 16px;
-  border-radius: 6px;
   text-align: right;
+  ${({ theme }) => theme.typography.h6}
 
   ::placeholder {
     color: ${({ theme }) => theme.palette.dark1.main};
   }
 
-  :focus {
-    border: 1px solid ${({ theme }) => theme.palette.primary.main};
-  }
   :disabled {
     color: ${({ theme }) => theme.palette.light3.main};
   }
-
-  border: 1px solid
-    ${({ theme, errored }) => {
-      if (errored) {
-        return theme.palette.danger.main;
-      }
-      return theme.palette.grey1.main;
-    }};
 `;
+
+NumberField.defaultProps = {
+  placeholder: `0.0`,
+};
 
 export default NumberField;
