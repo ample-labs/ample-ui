@@ -29,6 +29,7 @@ export { default as TabButton } from './components/TabBar/TabButton';
 export { default as Text } from './components/Text/Text';
 export { default as TextField } from './components/TextField/TextField';
 export { default as Tooltip } from './components/Tooltip/Tooltip';
+export { default as Slider } from './components/Slider/Slider';
 
 // Utils
 export * from './utils/createAuiTheme';
