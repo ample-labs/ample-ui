@@ -70,7 +70,6 @@ const PointerSpan = styled.span`
   height: 24px;
   width: 24px;
   background-color: rgb(255, 255, 255);
-  border: 2px solid currentcolor;
   color: #003187;
 `;
 
@@ -89,10 +88,7 @@ const SliderInput = styled.input`
   padding: 13px 0px;
 `;
 
-const ValueLabelContainer = styled.span`
-  display: flex;
-`;
-const ValueLabelWrapper = styled.span``;
+const ValueLabelContainer = styled.span``;
 const ValueLabel = styled.span`
   font-color: #f8f8f8;
 `;
@@ -102,7 +98,7 @@ export interface SliderProps {
   min: number;
   max: number;
   step?: number;
-  rangeValue?: number;
+  value: number;
   valueLabelDisplay?: string;
   color?: SliderColor;
   onChange?: (e: any) => void;
@@ -118,60 +114,49 @@ const Slider = styled(
       SliderProps
   >(
     (
-      {
-        className,
-        ariaLabel,
-        min,
-        max,
-        step,
-        rangeValue,
-        color,
-        onChange,
-        ...props
-      },
+      { className, ariaLabel, min, max, value, color, onChange, ...props },
       ref,
     ) => {
-      const [valueControl, setValueControl] = React.useState<number>(
-        rangeValue || 0,
+      const [newValue, setNewValue] = React.useState(value);
+      const valueRange = React.useCallback(
+        (value: number, min: number, max: number) => {
+          console.log((value - min) / (max - min));
+          return (value - min) / (max - min);
+        },
+        [],
       );
-      const [fullRange, setFullRange] = React.useState(max - min || 100);
-      const handleChange = React.useCallback((e: any) => {
-        setValueControl(e.target.value);
+      const percentLabel = React.useCallback((value: number) => {
+        return `${(value * 100).toFixed(1)}%`;
       }, []);
+
       return (
-        <SliderContainer
-          className={className}
-          aria-label={ariaLabel}
-          color={color}
-        >
+        <SliderContainer color={color}>
           <SliderWarpper>
             <SliderSpan>
               <FullRangeSpan />
               <SetRangeSpan
                 style={{
-                  width: `${((valueControl - min) / fullRange) * 100}%`,
+                  width: `${valueRange(newValue, min, max) * 100}%`,
                 }}
               ></SetRangeSpan>
               <PointerSpan
-                style={{ left: `${(valueControl - min) / fullRange}%` }}
+                style={{ left: `${valueRange(newValue, min, max)}%` }}
               >
                 <SliderInput
                   type="range"
-                  aria-label={ariaLabel}
                   min={min}
                   max={max}
-                  value={valueControl}
-                  step={step}
+                  value={newValue}
                   ref={ref}
-                  onChange={(e) => handleChange(e)}
+                  onChange={(e) => {
+                    setNewValue(e.target.valueAsNumber);
+                  }}
                   {...props}
                 />
                 <ValueLabelContainer>
-                  <ValueLabelWrapper>
-                    <ValueLabel>
-                      {(((valueControl - min) / fullRange) * 100).toFixed(1)}%
-                    </ValueLabel>
-                  </ValueLabelWrapper>
+                  <ValueLabel>
+                    {percentLabel(valueRange(newValue, min, max))}
+                  </ValueLabel>
                 </ValueLabelContainer>
               </PointerSpan>
             </SliderSpan>
@@ -188,7 +173,7 @@ Slider.defaultProps = {
   step: 1,
   min: 0,
   max: 100,
-  rangeValue: 20,
+  value: 20,
 };
 
 export default Slider;

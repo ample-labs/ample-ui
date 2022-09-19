@@ -35,9 +35,7 @@ export const WithLabel: ComponentStory<typeof FormControlLabel> = ({
 }) => {
   return (
     <FormControlLabel
-      control={
-        <Slider min={20} max={100} rangeValue={50} disabled={disabled} />
-      }
+      control={<Slider min={20} max={100} value={50} disabled={disabled} />}
       {...props}
     />
   );
