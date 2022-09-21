@@ -30,16 +30,38 @@ export const Default = Template.bind({});
 Default.args = {};
 
 export const WithLabel: ComponentStory<typeof FormControlLabel> = ({
+  min,
+  max,
+  value,
   disabled,
   ...props
 }) => {
+  const [newValue, setNewValue] = useState(value);
+
+  // Slider value changes
+  const handleSliderChange = React.useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(e.target.valueAsNumber);
+      setNewValue(e.target.valueAsNumber);
+    },
+    [],
+  );
+
   return (
-    <FormControlLabel
-      control={<Slider min={20} max={100} value={50} disabled={disabled} />}
-      {...props}
+    <Slider
+      min={min}
+      max={max}
+      value={newValue}
+      onChange={(e) => {
+        handleSliderChange(e);
+      }}
+      disabled={disabled}
     />
   );
 };
 WithLabel.args = {
+  min: 20,
+  max: 150,
+  value: 30,
   disabled: false,
 };
